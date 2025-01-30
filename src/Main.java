@@ -1,5 +1,4 @@
 import DataStructures.DoubleyLinkedList;
-import DataStructures.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,12 +16,11 @@ public class Main {
        // myList.printList();
 
         //DoubleyLinkedList
-        DoubleyLinkedList myList1 = new DoubleyLinkedList(4);
-        myList1.printList();
+       DoubleyLinkedList list = new DoubleyLinkedList(1);
+       list.printList();
         System.out.println(" ");
-        myList1.append(6);
-        myList1.append(5);
-        myList1.printList();
-      //  System.out.println(myList1.removeLast());
+        list.prepend(6);
+        list.printList();
+        list.removeFirst();
     }
 }

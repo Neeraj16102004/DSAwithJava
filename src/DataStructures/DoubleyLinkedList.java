@@ -5,7 +5,7 @@ public class DoubleyLinkedList {
    private Node head;
    private Node tail;
    private  int length;
-    class Node{
+    static class Node{
         int value;
         Node next;
         Node prev;
@@ -37,7 +37,7 @@ public class DoubleyLinkedList {
         System.out.println("Length" + length);
     }
     public void append(int value){
-      Node newNode =new Node(value);
+      Node newNode = new Node(value);
        if(length ==0){
            head = newNode;
            tail = newNode;
@@ -57,11 +57,36 @@ public class DoubleyLinkedList {
        }
        else{
            tail = tail.prev;
-           tail.next = null;
+          if (tail!=null){tail.next = null;}
            temp.prev = null;
        }
        length--;
        return temp;
     }
+     public void prepend(int value){
+        Node newNode = new Node(value);
+        if(length==0){
+            head = newNode;
+            tail = newNode;
+        }else{
+            newNode.next = head;
+            head.prev = newNode;
+        }
+        length++;
+     }
+     public Node removeFirst(){
+        if(length==0) return null;
+        Node temp = head;
+        if(length==1){
+            head = null;
+            tail = null;
+        }else{
+            head = head.next;
+           if(head!=null) {head.prev = null;}
+            temp.next = null;
+        }
+        length--;
+        return temp;
+     }
    }
 
