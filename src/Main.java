@@ -17,10 +17,11 @@ public class Main {
 
         //DoubleyLinkedList
        DoubleyLinkedList list = new DoubleyLinkedList(1);
-       list.printList();
+        list.printList();
         System.out.println(" ");
         list.prepend(6);
         list.printList();
-        list.removeFirst();
+        list.remove(5);
+        list.printList();;
     }
 }
