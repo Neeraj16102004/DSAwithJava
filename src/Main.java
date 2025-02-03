@@ -1,4 +1,6 @@
 import DataStructures.DoubleyLinkedList;
+import DataStructures.Queue;
+import DataStructures.Stack;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,12 +18,26 @@ public class Main {
        // myList.printList();
 
         //DoubleyLinkedList
-       DoubleyLinkedList list = new DoubleyLinkedList(1);
-        list.printList();
-        System.out.println(" ");
-        list.prepend(6);
-        list.printList();
-        list.remove(5);
-        list.printList();;
+     //  DoubleyLinkedList list = new DoubleyLinkedList(4);
+       //list.append(1);
+      // list.prepend(3);
+       //list.makeEmpty();
+
+      // list.printAll();
+
+        //Stack
+
+      //  Stack stack = new Stack(1);
+      //  stack.push(2);
+      //  stack.pop();
+      //  stack.printStack();
+
+        //Queue
+
+        Queue queue = new Queue(1);
+        queue.enqueue(2);
+        queue.dequeue();
+        queue.printQueue();
+
     }
 }

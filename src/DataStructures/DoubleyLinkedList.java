@@ -1,11 +1,7 @@
 package DataStructures;
 
 public class DoubleyLinkedList {
-
-   private Node head;
-   private Node tail;
-   private  int length;
-    static class Node{
+    class Node{
         int value;
         Node next;
         Node prev;
@@ -13,21 +9,24 @@ public class DoubleyLinkedList {
             this.value = value;
         }
     }
-
+    private Node head;
+    private Node tail;
+    private  int length;
    public DoubleyLinkedList(int value){
        Node newNode = new Node(value);
        head = newNode;
        tail = newNode;
        length =1;
    }
-   public void printList(){
-       Node temp = head;
-       while(temp != null){
-           System.out.println(temp.value);
-           temp = temp.next;
-       }
-   }
-       public void getHead(){
+    public void printList() {
+        Node temp = head;
+        while (temp != null) {
+            System.out.println(temp.value);
+            temp = temp.next;
+        }
+    }
+
+    public void getHead(){
            System.out.println("Head" + head.value);
        }
        public void getTail(){
@@ -71,6 +70,7 @@ public class DoubleyLinkedList {
         }else{
             newNode.next = head;
             head.prev = newNode;
+            head = newNode;
         }
         length++;
      }
@@ -145,6 +145,27 @@ public class DoubleyLinkedList {
 
         length--;
         return temp;
+    }
+    public void printAll() {
+        if (length == 0) {
+            System.out.println("Head: null");
+            System.out.println("Tail: null");
+        } else {
+            System.out.println("Head: " + head.value);
+            System.out.println("Tail: " + tail.value);
+        }
+        System.out.println("Length:" + length);
+        System.out.println("\nDoubly Linked List:");
+        if (length == 0) {
+            System.out.println("empty");
+        } else {
+            printList();
+        }
+    }
+    public void makeEmpty(){
+         head = null;
+         tail = null;
+         length = 0;
     }
    }
 
