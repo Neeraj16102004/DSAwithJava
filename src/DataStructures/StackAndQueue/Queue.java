@@ -1,4 +1,4 @@
-package DataStructures;
+package DataStructures.StackAndQueue;
 
 public class Queue {
       private Node first;

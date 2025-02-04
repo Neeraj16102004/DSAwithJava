@@ -1,6 +1,6 @@
-package DataStructures;
+package DataStructures.LinkedList;
 
-public class DoubleyLinkedList {
+public class DoublyLinkedList {
     class Node{
         int value;
         Node next;
@@ -12,7 +12,7 @@ public class DoubleyLinkedList {
     private Node head;
     private Node tail;
     private  int length;
-   public DoubleyLinkedList(int value){
+   public DoublyLinkedList(int value){
        Node newNode = new Node(value);
        head = newNode;
        tail = newNode;
