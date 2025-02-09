@@ -9,6 +9,8 @@ public class Main {
         myBST.insert(2);
         myBST.insert(3);
         myBST.insert(4);
-        System.out.println(myBST.contains(3));
+        myBST.rInsert(5);
+        myBST.deleteNode(2);
+        System.out.println(myBST.rContains(2));
     }
 }
