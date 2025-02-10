@@ -5,12 +5,18 @@ public class Main {
         //Binary Search Tree
         BinarySearchTree myBST = new BinarySearchTree();
         System.out.println("ROOT =" + myBST.root);
-        myBST.insert(1);
-        myBST.insert(2);
-        myBST.insert(3);
-        myBST.insert(4);
-        myBST.rInsert(5);
-        myBST.deleteNode(2);
+        myBST.insert(47);
+        myBST.insert(21);
+        myBST.insert(76);
+        myBST.insert(18);
+        myBST.rInsert(27);
+        myBST.rInsert(52);
+        myBST.rInsert(82);
+
         System.out.println(myBST.rContains(2));
+        System.out.println( myBST.BFS());
+        System.out.println(myBST.DFSPreOrder());
+        System.out.println(myBST.DFSPostOrder());
+        System.out.println(myBST.DFSInOrder());
     }
 }
